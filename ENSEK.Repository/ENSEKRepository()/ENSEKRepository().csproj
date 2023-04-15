@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>ENSEKRepository__</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ENSEK.Contracts\ENSEK.Contracts\ENSEK.Contracts.csproj" />
+    <ProjectReference Include="..\..\ENSEK.Database\ENSEK.Database\ENSEK.Database.csproj" />
+  </ItemGroup>
+
+</Project>

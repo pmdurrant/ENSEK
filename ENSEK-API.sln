@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Spec", "Spec", "{1DA722B7-2CB9-4A89-B0ED-CFC0BEC7393E}"
+	ProjectSection(SolutionItems) = preProject
+		..\Spec\ENSEK REMOTE TECHNICAL TEST BRIEF 16-12-2021.pptx = ..\Spec\ENSEK REMOTE TECHNICAL TEST BRIEF 16-12-2021.pptx
+		..\Spec\Meter_Reading.xlsx = ..\Spec\Meter_Reading.xlsx
+		..\Spec\Test_Accounts.xlsx = ..\Spec\Test_Accounts.xlsx
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENSEK,Entities", "ENSEK,Entities\ENSEK,Entities.csproj", "{787CA983-4B71-40C7-BC64-CDD64B4F911D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENSEK.Contracts", "ENSEK.Contracts\ENSEK.Contracts\ENSEK.Contracts.csproj", "{CF4AC746-8DDF-494B-ACF3-7AFDE47A8A17}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENSEK.Core", "ENSEK.Core\ENSEK.Core\ENSEK.Core.csproj", "{41265A7E-FFA5-4397-9A86-6F96AD2C90EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENSEK.Database", "ENSEK.Database\ENSEK.Database\ENSEK.Database.csproj", "{7E850A0A-3986-4876-BE66-9C68020D7EC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENSEKRepository()", "ENSEK.Repository\ENSEKRepository()\ENSEKRepository().csproj", "{A0CED4F5-06C0-4F15-B491-9C8FB6905081}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENSEK-API", "ENSEK-API\ENSEK-API.csproj", "{8C1CC556-8274-4DD3-B285-D6A1046C4EEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{787CA983-4B71-40C7-BC64-CDD64B4F911D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{787CA983-4B71-40C7-BC64-CDD64B4F911D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{787CA983-4B71-40C7-BC64-CDD64B4F911D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{787CA983-4B71-40C7-BC64-CDD64B4F911D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF4AC746-8DDF-494B-ACF3-7AFDE47A8A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF4AC746-8DDF-494B-ACF3-7AFDE47A8A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF4AC746-8DDF-494B-ACF3-7AFDE47A8A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF4AC746-8DDF-494B-ACF3-7AFDE47A8A17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41265A7E-FFA5-4397-9A86-6F96AD2C90EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41265A7E-FFA5-4397-9A86-6F96AD2C90EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41265A7E-FFA5-4397-9A86-6F96AD2C90EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41265A7E-FFA5-4397-9A86-6F96AD2C90EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E850A0A-3986-4876-BE66-9C68020D7EC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E850A0A-3986-4876-BE66-9C68020D7EC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E850A0A-3986-4876-BE66-9C68020D7EC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E850A0A-3986-4876-BE66-9C68020D7EC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0CED4F5-06C0-4F15-B491-9C8FB6905081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0CED4F5-06C0-4F15-B491-9C8FB6905081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0CED4F5-06C0-4F15-B491-9C8FB6905081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0CED4F5-06C0-4F15-B491-9C8FB6905081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C1CC556-8274-4DD3-B285-D6A1046C4EEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C1CC556-8274-4DD3-B285-D6A1046C4EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C1CC556-8274-4DD3-B285-D6A1046C4EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C1CC556-8274-4DD3-B285-D6A1046C4EEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C725178-C00C-48A7-9413-CE1CEF705381}
+	EndGlobalSection
+EndGlobal
