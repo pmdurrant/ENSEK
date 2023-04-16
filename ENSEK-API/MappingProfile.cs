@@ -16,7 +16,6 @@ using AutoMapper;
 using ENSEK.Entities.DTO;
 using ENSEK.Entities.Models;
 using Microsoft.AspNet.Identity;
-using NUnit.Framework;
 using SixLabors.ImageSharp.ColorSpaces.Companding;
 
 namespace ENSEK_API

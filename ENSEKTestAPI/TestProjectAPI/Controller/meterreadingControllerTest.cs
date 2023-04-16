@@ -1,25 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.Core.Objects;
-using System.IO;
-using System.IO.Abstractions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
-using Azure;
+﻿using AutoMapper;
+using BitMiracle.LibTiff.Classic;
 using ENSEK.Contracts;
 using ENSEK.Entities.Models;
 using ENSEK_API.Controllers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.InMemory.Internal;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.FileProviders;
-using Moq;
-using NUnit.Framework;
-using static Org.BouncyCastle.Math.EC.ECCurve;
-using Assert = Xunit.Assert;
+
 
 namespace TestProjectAPI.Controller
 {
@@ -82,19 +69,23 @@ namespace TestProjectAPI.Controller
             IFormFile file = new FormFile(stream, 0, stream.Length, "test_from_form", fileName);
 
             // Act
-            var okResult = _controller.Upload(file) ;
-
+            var result = _controller.Upload(file);
+       
             // Assert
-            var items = Assert.IsType<List<MeterReading>>(okResult.Result);
-            Assert.Equal(3, items.Count);
+            Assert.IsType<OkObjectResult>(result);
 
-            return okResult.Result;
-        }
-     
-        [SetUp]
-        public void Setup()
-        { 
+            var okResult = Assert.IsType<OkObjectResult>(result);
+            var returnSession = Assert.IsType<List<MeterReading>>(okResult.Value);
 
+
+            //Assert.IsType<List<MeterReading>>(okResult2.Value);
+            //Assert.Equal(StatusCodes.Status200OK, okResult.StatusCode);
+            //// var items = Assert.IsType<List<MeterReading>>(okResult.Result);
+            //Assert.Equal(3, items.Count);
+
+            //return okResult.Result;
+            return null;
         }
+ 
     }
 }

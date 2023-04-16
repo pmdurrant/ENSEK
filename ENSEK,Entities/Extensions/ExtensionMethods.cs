@@ -12,22 +12,13 @@
 // <summary></summary>
 // ***********************************************************************
 using ENSEK.Entities.Models;
-using Microsoft.Extensions.FileSystemGlobbing;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity;
 using System.Globalization;
-using System.Linq;
-using System.Net.Mime;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using ENSEK.Entities.Models.Enum;
 using IronXL;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using NUnit.Framework;
 
 namespace ENSEK.Entities.Extensions
 {

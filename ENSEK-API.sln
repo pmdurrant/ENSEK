@@ -18,11 +18,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENSEK.Core", "ENSEK.Core\EN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENSEK.Database", "ENSEK.Database\ENSEK.Database\ENSEK.Database.csproj", "{7E850A0A-3986-4876-BE66-9C68020D7EC7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENSEKRepository()", "ENSEK.Repository\ENSEKRepository()\ENSEKRepository().csproj", "{A0CED4F5-06C0-4F15-B491-9C8FB6905081}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENSEKRepository", "ENSEK.Repository\ENSEKRepository()\ENSEKRepository.csproj", "{A0CED4F5-06C0-4F15-B491-9C8FB6905081}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENSEK-API", "ENSEK-API\ENSEK-API.csproj", "{8C1CC556-8274-4DD3-B285-D6A1046C4EEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjectAPI", "ENSEKTestAPI\TestProjectAPI\TestProjectAPI.csproj", "{9F21A2BF-9CCE-4ADB-AC35-A1AE3636BF8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProjectAPI", "ENSEKTestAPI\TestProjectAPI\TestProjectAPI.csproj", "{9F21A2BF-9CCE-4ADB-AC35-A1AE3636BF8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

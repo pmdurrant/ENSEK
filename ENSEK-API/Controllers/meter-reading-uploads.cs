@@ -20,6 +20,7 @@ using ENSEK.Entities.Models;
 using ENSEK.Entities.Models.Enum;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace ENSEK_API.Controllers;
 
 //readonly IAuthorRepository _authorRepository;
@@ -30,10 +31,10 @@ namespace ENSEK_API.Controllers;
 
 /// <summary>
 /// Class MeterReadingUploadsController.
-/// Implements the <see cref="ControllerBase" />
+/// Implements the <see cref="Microsoft.AspNetCore.Mvc.ControllerBase" />
 /// </summary>
-/// <seealso cref="ControllerBase" />
-[Route("api/[controller]")]
+/// <seealso cref="Microsoft.AspNetCore.Mvc.ControllerBase" />
+[Microsoft.AspNetCore.Components.Route("api/[controller]")]
 [ApiController]
 public class MeterReadingUploadsController : ControllerBase
 {
