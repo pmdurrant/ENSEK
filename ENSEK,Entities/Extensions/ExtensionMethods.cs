@@ -169,7 +169,7 @@ namespace ENSEK.Entities.Extensions
 
                     metersReading.Add(meterReading);
                 }
-
+             
                 if (_configuration["RemoveHeaderRow"] == "True")
                     metersReading.RemoveAt(0);
             }

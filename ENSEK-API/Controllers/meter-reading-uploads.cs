@@ -68,7 +68,7 @@ public class MeterReadingUploadsController : ControllerBase
     }
 
 
-    /// <summary>
+    /// <summary> 
     /// Uploads the specified file.
     /// </summary>
     /// <param name="file">The file.</param>
@@ -86,11 +86,11 @@ public class MeterReadingUploadsController : ControllerBase
 
             var rtnData = new List<MeterReadingDto>();
 
-            var fed = _meterReadingRepository.GetMeterReadings();
-            // var fred = _mapper.Map<List<MeterReadingDto>>(fed);
+            var tmpReadings = _meterReadingRepository.GetMeterReadings();
+            // var tmp = _mapper.Map<List<MeterReadingDto>>(tmpReadings);
 
 
-            foreach (var item in fed)
+            foreach (var item in tmpReadings)
             {
                 var newReading = new MeterReadingDto
                 {

@@ -32,5 +32,6 @@ namespace ENSEK.Contracts
         /// </summary>
         /// <param name="meterReadings">The meter readings.</param>
         void UpdateMeterReadings(List<MeterReading> meterReadings);
+
     }
 }

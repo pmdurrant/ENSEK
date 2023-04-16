@@ -22,6 +22,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENSEKRepository()", "ENSEK.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENSEK-API", "ENSEK-API\ENSEK-API.csproj", "{8C1CC556-8274-4DD3-B285-D6A1046C4EEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjectAPI", "ENSEKTestAPI\TestProjectAPI\TestProjectAPI.csproj", "{9F21A2BF-9CCE-4ADB-AC35-A1AE3636BF8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{8C1CC556-8274-4DD3-B285-D6A1046C4EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C1CC556-8274-4DD3-B285-D6A1046C4EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C1CC556-8274-4DD3-B285-D6A1046C4EEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F21A2BF-9CCE-4ADB-AC35-A1AE3636BF8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F21A2BF-9CCE-4ADB-AC35-A1AE3636BF8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F21A2BF-9CCE-4ADB-AC35-A1AE3636BF8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F21A2BF-9CCE-4ADB-AC35-A1AE3636BF8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

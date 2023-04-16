@@ -92,7 +92,7 @@ namespace ENSEK.Repository
         {
                 using (var context = new ApiContext())
                 {
-                    var list = context.Readings.ToList();
+                 var list = context.Readings.ToList();
                     return list;
                 }
             }
