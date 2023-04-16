@@ -32,7 +32,7 @@ namespace ENSEK_API
 
         // This is the approach starting with version 5
         /// <summary>
-        /// Initializes a new instance of the <see cref="MappingProfile"/> class.
+        /// Initializes a new instance of the <see cref="MappingProfile" /> class.
         /// </summary>
         public MappingProfile()
         {

@@ -95,7 +95,7 @@ public class MeterReadingDto
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="MeterReadingDto"/> class.
+    /// Initializes a new instance of the <see cref="MeterReadingDto" /> class.
     /// </summary>
     public MeterReadingDto()
     {

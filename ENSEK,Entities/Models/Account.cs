@@ -23,13 +23,13 @@ namespace ENSEK.Entities.Models
     public class Account
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Account"/> class.
+        /// Initializes a new instance of the <see cref="Account" /> class.
         /// </summary>
         public Account()
         {
         }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Account"/> class.
+        /// Initializes a new instance of the <see cref="Account" /> class.
         /// </summary>
         /// <param name="accountId">The account identifier.</param>
         /// <param name="firstName">The first name.</param>

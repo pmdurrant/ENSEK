@@ -33,7 +33,7 @@ namespace ENSEK.Repository
     public class MeterReadingRepository : IMeterReadingRepository
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MeterReadingRepository"/> class.
+        /// Initializes a new instance of the <see cref="MeterReadingRepository" /> class.
         /// </summary>
         public MeterReadingRepository()
         {

@@ -95,7 +95,7 @@ namespace ENSEK.Entities.Models
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MeterReading"/> class.
+        /// Initializes a new instance of the <see cref="MeterReading" /> class.
         /// </summary>
         /// <param name="accountId">The account identifier.</param>
         /// <param name="meterReadingDateTime">The meter reading date time.</param>
@@ -110,13 +110,13 @@ namespace ENSEK.Entities.Models
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MeterReading"/> class.
+        /// Initializes a new instance of the <see cref="MeterReading" /> class.
         /// </summary>
         public MeterReading()
         {
         }
         /// <summary>
-        /// Initializes a new instance of the <see cref="MeterReading"/> class.
+        /// Initializes a new instance of the <see cref="MeterReading" /> class.
         /// </summary>
         /// <param name="id">The identifier.</param>
         public MeterReading(Int32 id)
