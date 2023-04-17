@@ -1,0 +1,12 @@
+﻿C:\working\ENSEK\ENSEKTestAPI\TestProjectAPI\Controller\meterreadingControllerTest.cs
+C:\working\ENSEK\ENSEKTestAPI\TestProjectAPI\MeterReadingServiceFake.cs
+C:\working\ENSEK\ENSEKTestAPI\TestProjectAPI\Usings.cs
+C:\Users\pdurr\.nuget\packages\microsoft.net.test.sdk\17.5.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs
+C:\Users\pdurr\.nuget\packages\microsoft.testplatform.testhost\17.5.0\build\netcoreapp3.1\x64\testhost.exe
+C:\Users\pdurr\.nuget\packages\microsoft.testplatform.testhost\17.5.0\build\netcoreapp3.1\x64\testhost.dll
+C:\working\ENSEK\ENSEKTestAPI\TestProjectAPI\appsettings.Development.json
+C:\working\ENSEK\ENSEKTestAPI\TestProjectAPI\appconfig.json
+C:\Users\pdurr\.nuget\packages\xunit.runner.visualstudio\2.4.5\build\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\pdurr\.nuget\packages\xunit.runner.visualstudio\2.4.5\build\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\pdurr\.nuget\packages\xunit.runner.visualstudio\2.4.5\build\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll
+C:\working\ENSEK\ENSEKTestAPI\TestProjectAPI\Spec\Meter_Reading.xlsx

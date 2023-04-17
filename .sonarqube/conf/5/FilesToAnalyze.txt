@@ -1,0 +1,16 @@
+﻿C:\working\ENSEK\ENSEK-API\Controllers\meter-reading-uploads.cs
+C:\working\ENSEK\ENSEK-API\MappingProfile.cs
+C:\working\ENSEK\ENSEK-API\Program.cs
+C:\working\ENSEK\ENSEK-API\obj\Debug\net6.0\ENSEK-API.GlobalUsings.g.cs
+C:\working\ENSEK\ENSEK-API\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+C:\working\ENSEK\ENSEK-API\obj\Debug\net6.0\ENSEK-API.AssemblyInfo.cs
+C:\working\ENSEK\ENSEK-API\obj\Debug\net6.0\ENSEK-API.MvcApplicationPartsAssemblyInfo.cs
+C:\working\ENSEK\ENSEK-API\appsettings.Development.json
+C:\working\ENSEK\ENSEK-API\appsettings.json
+C:\Users\pdurr\.nuget\packages\xunit.runner.visualstudio\2.4.5\build\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\pdurr\.nuget\packages\xunit.runner.visualstudio\2.4.5\build\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\pdurr\.nuget\packages\xunit.runner.visualstudio\2.4.5\build\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll
+C:\working\ENSEK\ENSEK-API\.dockerignore
+C:\working\ENSEK\ENSEK-API\Dockerfile
+C:\working\ENSEK\ENSEK-API\Properties\launchSettings.json
+C:\working\ENSEK\.dockerignore

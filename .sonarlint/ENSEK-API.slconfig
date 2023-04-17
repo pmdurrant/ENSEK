@@ -1,0 +1,16 @@
+{
+  "ServerUri": "http://localhost:9000/",
+  "Organization": null,
+  "ProjectKey": "ENSEK",
+  "ProjectName": "ENSEK",
+  "Profiles": {
+    "Secrets": {
+      "ProfileKey": "AYeMhkg3YPZ9qBUkKXsl",
+      "ProfileTimestamp": "2023-04-17T00:03:43Z"
+    },
+    "CSharp": {
+      "ProfileKey": "AYeMhkkFYPZ9qBUkKX37",
+      "ProfileTimestamp": "2023-04-17T00:03:43Z"
+    }
+  }
+}

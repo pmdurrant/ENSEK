@@ -6,6 +6,8 @@ using ENSEK_API.Controllers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Moq;
+using Npoi.Mapper;
 
 
 namespace TestProjectAPI.Controller
@@ -24,9 +26,10 @@ namespace TestProjectAPI.Controller
         {
             _service = new MeterReadingServiceFake();
 
+    
             _configuration = new ConfigurationBuilder().AddJsonFile("appconfig.json").Build();
 
-            _controller = new MeterReadingUploadsController(_configuration, _service,_mapper);
+            _controller = new MeterReadingUploadsController(_configuration, _service, _mapper);
         }
 
         [Fact]

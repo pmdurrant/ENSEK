@@ -122,7 +122,7 @@ namespace ENSEK.Entities.Models
         public MeterReading(Int32 id)
         {
 
-            Id = Id;
+            Id = id;
         }
     }
 }
