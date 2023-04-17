@@ -24,6 +24,25 @@ namespace TestProjectAPI.Entities
 
 
         }
+
+
+        [Fact]
+
+
+        public void Bad_Entity()
+
+        {
+            var expected = new MeterReading() { MeterReadingDateTime = DateTime.Parse("2/04/2019 09:24"), MeterReadValue = "1002" };
+
+            MeterReading meterreading = new MeterReading("", DateTime.Parse("2/04/2019 09:24"), "1002");
+
+            Assert.Equal( meterreading.Id,0);
+
+            Assert.Equal(expected.MeterReadValue, meterreading.MeterReadValue);
+
+            Assert.Equal(expected.MeterReadingDateTime, meterreading.MeterReadingDateTime);
+
+        }
     }
     
 }
