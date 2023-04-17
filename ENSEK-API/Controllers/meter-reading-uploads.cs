@@ -106,7 +106,7 @@ public class MeterReadingUploadsController : ControllerBase
 
         if (metersReading.FileImportResponse == ImportResponse.Failed) return BadRequest(metersReading.Errors);
 
-
+      
         return Ok(metersReading.MetersReadings);
     }
 

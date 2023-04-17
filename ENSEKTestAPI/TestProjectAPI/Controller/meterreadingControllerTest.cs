@@ -49,15 +49,16 @@ namespace TestProjectAPI.Controller
             IFormFile file = new FormFile(stream, 0, stream.Length, "test_from_form", fileName);  // Act
             var okResult = _controller.Upload(file);
 
-          
-           
-            
+
+            Assert.NotNull(okResult);
+
+
             // Assert
             Assert.IsType<OkObjectResult>(okResult );
         }
 
         [Fact]
-        public object Get_WhenCalled_ReturnsAllItems()
+        public void Get_WhenCalled_ReturnsAllItems()
         {
           
 
@@ -79,19 +80,15 @@ namespace TestProjectAPI.Controller
             Assert.NotNull(result);
           
 
-            var okResult = Assert.IsType<OkObjectResult>(result);
-            var returnSession = Assert.IsType<List<MeterReading>>(okResult.Value);
-
-
+            var okResult = Assert.IsType<OkObjectResult>(result.Result);
+          
 
      
-            //Assert.IsType<List<MeterReading>>(okResult2.Value);
+            Assert.IsType<List<MeterReading>>(okResult.Value);
             //Assert.Equal(StatusCodes.Status200OK, okResult.StatusCode);
-            //// var items = Assert.IsType<List<MeterReading>>(okResult.Result);
-            //Assert.Equal(3, items.Count);
+             var items = Assert.IsType<List<MeterReading>>(okResult.Value);
+            Assert.Equal(3, items.Count);
 
-            //return okResult.Result;
-            return null;
         }
  
     }
