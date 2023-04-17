@@ -54,7 +54,7 @@ namespace TestProjectAPI.Controller
 
 
             // Assert
-            Assert.IsType<OkObjectResult>(okResult );
+            Assert.IsType<OkObjectResult>(okResult.Result );
         }
 
         [Fact]
