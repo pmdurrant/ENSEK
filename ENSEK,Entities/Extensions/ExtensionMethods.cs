@@ -141,9 +141,11 @@ namespace ENSEK.Entities.Extensions
                                 break;
                             case 1:
 
-                                var readingTmp = row[i].ToString();
+                                string? readingTmp = row[i].ToString();
                                 DateTime Tmp;
-                              var rst=  DateTime.TryParse(readingTmp.findDate(), out Tmp);
+#pragma warning disable CS8604
+                                var rst=  DateTime.TryParse(readingTmp.findDate(), out Tmp);
+#pragma warning restore CS8604
                                 if (rst)
                                 { 
                                 meterReading.MeterReadingDateTime = Tmp;

@@ -11,24 +11,26 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
 using System.Text;
 
 namespace ENSEK.Entities.Extensions;
 
 /// <summary>
-/// Class ConvertToJson.
+///     Class ConvertToJson.
 /// </summary>
 public class ConvertToJson
 {
     public const char unitString = '{';
     public const char unitStringStart = '[';
     public const char unitStringEnd = '[';
+
     /// <summary>
-    /// Converts the CSV file to json object.
+    ///     Converts the CSV file to json object.
     /// </summary>
     /// <param name="readerInput">The reader input.</param>
     /// <returns>System.String.</returns>
-    public string ConvertCsvFileToJsonObject(Stream readerInput)
+    public static string ConvertCsvFileToJsonObject(Stream readerInput)
     {
         var json = string.Empty;
         var csv = string.Empty;
@@ -44,7 +46,6 @@ public class ConvertToJson
 
         var lines = csv.Split(new[] { "\n" }, StringSplitOptions.None);
 
-         
 
         if (lines.Length > 1)
         {
@@ -62,7 +63,6 @@ public class ConvertToJson
                 if (string.IsNullOrEmpty(lines[i])) continue;
 
                 sbjson.Append(unitString);
-                
 
                 var data = lines[i].Split(',');
 

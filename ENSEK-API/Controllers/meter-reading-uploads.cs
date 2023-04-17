@@ -82,7 +82,9 @@ public class MeterReadingUploadsController : ControllerBase
 
         if (metersReading.FileImportResponse == ImportResponse.Success)
         {
+#pragma warning disable CS1998
             await Task.Run(async () => _meterReadingRepository.UpdateMeterReadings(metersReading.MetersReadings));
+#pragma warning restore CS1998
 
 
             var rtnData = new List<MeterReadingDto>();
@@ -135,7 +137,9 @@ public class MeterReadingUploadsController : ControllerBase
                 MeterReadValue = meterreading.MeterReadValuedto
             };
             metersReading.Add(input);
+#pragma warning disable CS1998
             await Task.Run(async () => _meterReadingRepository.UpdateMeterReadings(metersReading));
+#pragma warning restore CS1998
         }
 
         return Ok(input);
