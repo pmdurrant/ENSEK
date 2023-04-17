@@ -64,7 +64,7 @@ namespace ENSEK.Entities.Extensions
             }
             catch (ArgumentException ex)
             {
-                // Syntax error in the regular expression
+                var error = ex.Message; // Syntax error in the regular expression
             }
 
             return "Invalid Data";

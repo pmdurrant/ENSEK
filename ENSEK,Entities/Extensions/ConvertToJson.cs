@@ -57,6 +57,7 @@ public class ConvertToJson
                 if (string.IsNullOrEmpty(lines[i])) continue;
 
                 sbjson.Append("{");
+                
 
                 var data = lines[i].Split(',');
 

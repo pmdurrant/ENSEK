@@ -5,6 +5,7 @@ using ENSEK.Entities.Models;
 using ENSEK_API.Controllers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Moq;
 using Npoi.Mapper;
@@ -75,12 +76,15 @@ namespace TestProjectAPI.Controller
             var result = _controller.Upload(file);
        
             // Assert
-            Assert.IsType<OkObjectResult>(result);
+            Assert.NotNull(result);
+          
 
             var okResult = Assert.IsType<OkObjectResult>(result);
             var returnSession = Assert.IsType<List<MeterReading>>(okResult.Value);
 
 
+
+     
             //Assert.IsType<List<MeterReading>>(okResult2.Value);
             //Assert.Equal(StatusCodes.Status200OK, okResult.StatusCode);
             //// var items = Assert.IsType<List<MeterReading>>(okResult.Result);

@@ -24,6 +24,8 @@ namespace ENSEK.Entities.Models
     /// </summary>
     public class Error
     {
+        private long _rowNo;
+        private string? _reason;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Error"/> class.
@@ -44,11 +46,20 @@ namespace ENSEK.Entities.Models
         /// Gets or sets the row no.
         /// </summary>
         /// <value>The row no.</value>
-        public Int64 RowNo { get; set; }
+        public Int64 RowNo
+        {
+            get => _rowNo;
+            set => _rowNo = value;
+        }
+
         /// <summary>
         /// Gets or sets the reason.
         /// </summary>
         /// <value>The reason.</value>
-        public string Reason { get; set; }
+        public string Reason
+        {
+            get => _reason;
+            set => _reason = value;
+        }
     }
 }
