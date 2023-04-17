@@ -58,7 +58,7 @@ namespace ENSEK.Entities.Extensions
                     // match start: matchResults.Index
                     // match length: matchResults.Length
                     return matchResults.Value;
-                    matchResults = matchResults.NextMatch();
+                  //  matchResults = matchResults.NextMatch();
                    
                 }
             }

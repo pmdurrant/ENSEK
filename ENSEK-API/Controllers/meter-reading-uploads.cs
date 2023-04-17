@@ -82,7 +82,7 @@ public class MeterReadingUploadsController : ControllerBase
 
         if (metersReading.FileImportResponse == ImportResponse.Success)
         {
-            _meterReadingRepository.UpdateMeterReadings(metersReading.MetersReadings);
+            await Task.Run(async () => _meterReadingRepository.UpdateMeterReadings(metersReading.MetersReadings));
 
 
             var rtnData = new List<MeterReadingDto>();
@@ -135,7 +135,7 @@ public class MeterReadingUploadsController : ControllerBase
                 MeterReadValue = meterreading.MeterReadValuedto
             };
             metersReading.Add(input);
-            _meterReadingRepository.UpdateMeterReadings(metersReading);
+            await Task.Run(async () => _meterReadingRepository.UpdateMeterReadings(metersReading));
         }
 
         return Ok(input);
