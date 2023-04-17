@@ -58,7 +58,8 @@ namespace ENSEK.Entities.Models
         /// <value>The reason.</value>
         public string Reason
         {
-            get => _reason;
+            get => _reason ?? string.Empty;
+            
             set => _reason = value;
         }
     }

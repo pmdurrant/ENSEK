@@ -92,8 +92,13 @@ namespace ENSEK.Entities.Extensions
 
                         var readingTmp = row[i].ToString();
                         DateTime Tmp;
-                        DateTime.TryParse(readingTmp.findDate(), out Tmp);
-                        meterReading.MeterReadingDateTime = Tmp;
+                        if (readingTmp != null)
+                        {
+                            var success = DateTime.TryParse(readingTmp.findDate(), out Tmp);
+                            meterReading.MeterReadingDateTime = success ? Tmp : DateTime.MinValue;
+                        }
+
+
                         break;
                     case 2:
                         meterReading.MeterReadValue = row[i].ToString();

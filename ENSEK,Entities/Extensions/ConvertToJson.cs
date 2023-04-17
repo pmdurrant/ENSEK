@@ -20,6 +20,9 @@ namespace ENSEK.Entities.Extensions;
 /// </summary>
 public class ConvertToJson
 {
+    public const char unitString = '{';
+    public const char unitStringStart = '[';
+    public const char unitStringEnd = '[';
     /// <summary>
     /// Converts the CSV file to json object.
     /// </summary>
@@ -41,6 +44,8 @@ public class ConvertToJson
 
         var lines = csv.Split(new[] { "\n" }, StringSplitOptions.None);
 
+         
+
         if (lines.Length > 1)
         {
             // parse headers
@@ -48,7 +53,7 @@ public class ConvertToJson
 
             var sbjson = new StringBuilder();
             sbjson.Clear();
-            sbjson.Append("[");
+            sbjson.Append(unitStringStart);
 
             // parse data
             for (var i = 1; i < lines.Length; i++)
@@ -56,7 +61,7 @@ public class ConvertToJson
                 if (string.IsNullOrWhiteSpace(lines[i])) continue;
                 if (string.IsNullOrEmpty(lines[i])) continue;
 
-                sbjson.Append("{");
+                sbjson.Append(unitString);
                 
 
                 var data = lines[i].Split(',');
@@ -69,7 +74,7 @@ public class ConvertToJson
                 sbjson.Append("}" + (i < lines.Length - 1 ? "," : null));
             }
 
-            sbjson.Append("]");
+            sbjson.Append(unitStringEnd);
 
             json = sbjson.ToString();
         }
