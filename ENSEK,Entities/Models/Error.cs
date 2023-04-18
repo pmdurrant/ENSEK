@@ -11,11 +11,6 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ENSEK.Entities.Models
 {
@@ -59,7 +54,7 @@ namespace ENSEK.Entities.Models
         public string Reason
         {
             get => _reason ?? string.Empty;
-            
+
             set => _reason = value;
         }
     }

@@ -61,7 +61,7 @@ public class MeterReadingDto
     /// Gets or sets the account iddto.
     /// </summary>
     /// <value>The account iddto.</value>
-    public string? AccountIddto { get => _accountIddto; set=>_accountIddto=value; }
+    public string? AccountIddto { get => _accountIddto; set => _accountIddto = value; }
 
 
     /// <summary>

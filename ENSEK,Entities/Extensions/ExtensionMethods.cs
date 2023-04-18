@@ -12,13 +12,13 @@
 // <summary></summary>
 // ***********************************************************************
 using ENSEK.Entities.Models;
-using System.Data;
-using System.Globalization;
-using System.Text.RegularExpressions;
 using ENSEK.Entities.Models.Enum;
 using IronXL;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
+using System.Data;
+using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace ENSEK.Entities.Extensions
 {
@@ -58,8 +58,8 @@ namespace ENSEK.Entities.Extensions
                     // match start: matchResults.Index
                     // match length: matchResults.Length
                     return matchResults.Value;
-                  //  matchResults = matchResults.NextMatch();
-                   
+                    //  matchResults = matchResults.NextMatch();
+
                 }
             }
             catch (ArgumentException ex)
@@ -118,9 +118,9 @@ namespace ENSEK.Entities.Extensions
         {
 
             var metersReading = new List<MeterReading>();
-            var meterReadingErrors = new List <Error>();
+            var meterReadingErrors = new List<Error>();
             var workBook = WorkBook.Load(formFile.OpenReadStream());
-         
+
             // Select worksheet at index 0
             var workSheet = workBook.WorkSheets[0];
 
@@ -144,16 +144,16 @@ namespace ENSEK.Entities.Extensions
                                 string? readingTmp = row[i].ToString();
                                 DateTime Tmp;
 #pragma warning disable CS8604
-                                var rst=  DateTime.TryParse(readingTmp.findDate(), out Tmp);
+                                var rst = DateTime.TryParse(readingTmp.findDate(), out Tmp);
 #pragma warning restore CS8604
                                 if (rst)
-                                { 
-                                meterReading.MeterReadingDateTime = Tmp;
+                                {
+                                    meterReading.MeterReadingDateTime = Tmp;
                                 }
                                 else
                                 {
 
-                                    meterReadingErrors.Add(new Error( rowNo,"unable to read value" ));
+                                    meterReadingErrors.Add(new Error(rowNo, "unable to read value"));
                                 }
 
                                 break;
@@ -167,13 +167,13 @@ namespace ENSEK.Entities.Extensions
 
                     metersReading.Add(meterReading);
                 }
-             
+
                 if (_configuration["RemoveHeaderRow"] == "True")
                     metersReading.RemoveAt(0);
             }
 
-            ImportRst importRst = new ImportRst( ImportResponse.Success, meterReadingErrors, metersReading);
+            ImportRst importRst = new ImportRst(ImportResponse.Success, meterReadingErrors, metersReading);
             return importRst;
         }
     }
-}   
+}

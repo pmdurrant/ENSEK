@@ -11,7 +11,6 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using ENSEK.Entities.DTO;
 using ENSEK.Entities.Models;
 
 namespace ENSEK.Contracts

@@ -11,16 +11,10 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using AutoMapper;
 using ENSEK.Contracts;
-using ENSEK.Entities.DTO;
-using ENSEK.Entities.Models;
 using ENSEK.Repository;
 using ENSEK_API;
-
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Identity.Web;
 
 System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);

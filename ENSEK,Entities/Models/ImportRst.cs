@@ -11,11 +11,6 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ENSEK.Entities.Models.Enum;
 
 namespace ENSEK.Entities.Models
@@ -31,11 +26,11 @@ namespace ENSEK.Entities.Models
         /// <param name="fileImportResponse">The file import response.</param>
         /// <param name="errors">The errors.</param>
         /// <param name="meterReadings">The meter readings.</param>
-        public ImportRst(ImportResponse fileImportResponse, List<Error> errors ,List<MeterReading> meterReadings)
+        public ImportRst(ImportResponse fileImportResponse, List<Error> errors, List<MeterReading> meterReadings)
         {
             FileImportResponse = fileImportResponse;
             Errors = errors;
-            MetersReadings= meterReadings;
+            MetersReadings = meterReadings;
         }
 
         /// <summary>

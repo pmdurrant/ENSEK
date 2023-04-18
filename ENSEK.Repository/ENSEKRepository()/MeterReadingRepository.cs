@@ -14,13 +14,6 @@
 using ENSEK.Contracts;
 using ENSEK.Database;
 using ENSEK.Entities.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using ENSEK.Entities.DTO;
 
 
 namespace ENSEK.Repository
@@ -75,13 +68,13 @@ namespace ENSEK.Repository
         /// </summary>
         /// <param name="meterReadings">The meter readings.</param>
         public void UpdateMeterReadings(List<MeterReading> meterReadings)
+        {
+            using (var context = new ApiContext())
             {
-                using (var context = new ApiContext())
-                {
-                    context.Readings.AddRange(meterReadings);
-                    context.SaveChanges(true);
-                }
+                context.Readings.AddRange(meterReadings);
+                context.SaveChanges(true);
             }
+        }
 
 
         /// <summary>
@@ -90,12 +83,12 @@ namespace ENSEK.Repository
         /// <returns>List&lt;MeterReading&gt;.</returns>
         public List<MeterReading> GetMeterReadings()
         {
-                using (var context = new ApiContext())
-                {
-                 var list = context.Readings.ToList();
-                    return list;
-                }
+            using (var context = new ApiContext())
+            {
+                var list = context.Readings.ToList();
+                return list;
             }
         }
-
     }
+
+}

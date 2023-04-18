@@ -11,12 +11,9 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using System.Data;
 using AutoMapper;
 using ENSEK.Entities.DTO;
 using ENSEK.Entities.Models;
-using Microsoft.AspNet.Identity;
-using SixLabors.ImageSharp.ColorSpaces.Companding;
 
 namespace ENSEK_API
 {
