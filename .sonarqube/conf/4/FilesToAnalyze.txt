@@ -12,5 +12,6 @@ C:\Users\pdurr\.nuget\packages\xunit.runner.visualstudio\2.4.5\build\netcoreapp3
 C:\Users\pdurr\.nuget\packages\xunit.runner.visualstudio\2.4.5\build\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll
 C:\working\ENSEK\ENSEK-API\.dockerignore
 C:\working\ENSEK\ENSEK-API\Dockerfile
+C:\working\ENSEK\ENSEK-API\https\_.officeblox.co.uk-crt.pfx
 C:\working\ENSEK\ENSEK-API\Properties\launchSettings.json
 C:\working\ENSEK\.dockerignore

@@ -100,13 +100,4 @@ public class MeterReadingDto
     public MeterReadingDto()
     {
     }
-
-    //public MeterReadingDto(Int64 Id)
-    //{
-    //    _Iddto = Id;
-    //}
-
-
-
-
-}
+  }
