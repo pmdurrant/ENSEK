@@ -8,7 +8,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:7183;http://localhost:5169"
+      "applicationUrl": "https://ensek.officeblox.co.uk:5004;http://ensek.officeblox.co.uk:5002"
     },
     "IIS Express": {
       "commandName": "IISExpress",

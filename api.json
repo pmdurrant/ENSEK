@@ -1,0 +1,102 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ENSEK-API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/single-file": {
+      "post": {
+        "tags": [
+          "MeterReadingUploads"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/meterreading": {
+      "post": {
+        "tags": [
+          "MeterReadingUploads"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MeterReadingDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MeterReadingDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MeterReadingDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "MeterReadingDto": {
+        "type": "object",
+        "properties": {
+          "iddto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "accountIddto": {
+            "type": "string",
+            "nullable": true
+          },
+          "meterReadingDateTimedto": {
+            "type": "string",
+            "nullable": true
+          },
+          "meterReadValuedto": {
+            "type": "string",
+            "nullable": true
+          },
+          "rowNodto": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

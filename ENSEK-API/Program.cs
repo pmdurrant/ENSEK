@@ -11,14 +11,59 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
 using ENSEK.Contracts;
 using ENSEK.Repository;
 using ENSEK_API;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Server.Kestrel.Https;
 using Microsoft.Identity.Web;
 
 System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
 var builder = WebApplication.CreateBuilder(args);
+
+
+//    .ConfigureWebHostDefaults(webBuilder =>
+//{
+//    webBuilder.UseStartup<Startup>();
+//    webBuilder.ConfigureKestrel(serverOptions =>
+//    {
+//        serverOptions.Listen(IPAddress.Any, 5002);
+//        serverOptions.Listen(IPAddress.Any, 5004,
+//            listenOptions =>
+//            {
+//                listenOptions.UseHttps(cert);
+//            });
+//    });
+//});
+
+
+
+var loadpath = Directory.GetCurrentDirectory().ToString() + @"/https/_.officeblox.co.uk-crt.pfx";
+
+try
+{
+    var cert = new X509Certificate2(loadpath, "Gateway");
+
+
+
+builder.WebHost.UseKestrel(options =>
+{
+    options.Listen(IPAddress.Any, 5002);
+    options.Listen(IPAddress.Any, 5004,
+        listenOptions =>
+        {
+            listenOptions.UseHttps(cert);
+        });
+});
+}
+catch
+{
+    var msg = "Certificate load failure";
+}
+
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 // Add services to the container.

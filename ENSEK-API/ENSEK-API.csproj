@@ -39,4 +39,10 @@
     <ProjectReference Include="..\ENSEK.Repository\ENSEKRepository()\ENSEKRepository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="https\_.officeblox.co.uk-crt.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
