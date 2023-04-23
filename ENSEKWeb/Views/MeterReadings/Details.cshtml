@@ -1,0 +1,42 @@
+@model MeterReadingViewModel
+
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Meter Reading</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RowNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RowNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MeterReadingDateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MeterReadingDateTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MeterReadValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MeterReadValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="MeterReadings">Back to List</a>
+</div>

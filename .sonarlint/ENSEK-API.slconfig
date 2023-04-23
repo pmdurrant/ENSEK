@@ -1,16 +1,24 @@
 {
   "ServerUri": "http://localhost:9000/",
   "Organization": null,
-  "ProjectKey": "ENSEK",
-  "ProjectName": "ENSEK",
+  "ProjectKey": "ENSEK4",
+  "ProjectName": "ENSEK4",
   "Profiles": {
     "Secrets": {
-      "ProfileKey": "AYeMhkg3YPZ9qBUkKXsl",
-      "ProfileTimestamp": "2023-04-17T00:03:43Z"
+      "ProfileKey": "AYeOX3tMnNJ-LYbNEnMJ",
+      "ProfileTimestamp": "2023-04-17T08:40:34Z"
     },
     "CSharp": {
-      "ProfileKey": "AYeMhkkFYPZ9qBUkKX37",
-      "ProfileTimestamp": "2023-04-17T00:03:43Z"
+      "ProfileKey": "AYeOX3wfnNJ-LYbNEnXf",
+      "ProfileTimestamp": "2023-04-17T08:40:35Z"
+    },
+    "Js": {
+      "ProfileKey": "AYeOX3oVnNJ-LYbNEm_e",
+      "ProfileTimestamp": "2023-04-17T08:40:34Z"
+    },
+    "Ts": {
+      "ProfileKey": "AYeOX3_6nNJ-LYbNEoRo",
+      "ProfileTimestamp": "2023-04-17T08:40:36Z"
     }
   }
 }

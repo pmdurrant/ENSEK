@@ -71,7 +71,12 @@ namespace ENSEK.Repository
         {
             using (var context = new ApiContext())
             {
-                context.Readings.AddRange(meterReadings);
+                foreach (var insertMeterReading in meterReadings)
+                {
+                    context.Readings.AddIfNotExists(insertMeterReading, p => p.AccountId == insertMeterReading.AccountId && p.MeterReadingDateTime== insertMeterReading.MeterReadingDateTime  && p.MeterReadValue==insertMeterReading.MeterReadValue&& p.RowNo==insertMeterReading.RowNo);//&& p.Id==insertMeterReading.Id
+                }
+              
+               
                 context.SaveChanges(true);
             }
         }

@@ -1,5 +1,5 @@
-dotnet sonarscanner begin /k:"ENSEK" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="sqp_9ee8ff5b1d4174443ed0ec89a99bddbbd17fa865"
+dotnet sonarscanner begin /k:"ENSEK" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="sqp_bb8136cf52e8e691a1c3840108d42b45f524f93f"
 dotnet build .\ENSEK-API\ENSEK-API.csproj
-dotnet sonarscanner end /d:sonar.token="sqp_9ee8ff5b1d4174443ed0ec89a99bddbbd17fa865"   
+dotnet sonarscanner end /d:sonar.token="sqp_bb8136cf52e8e691a1c3840108d42b45f524f93f"   
 REM procep.exe
 REM java

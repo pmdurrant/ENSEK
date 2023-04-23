@@ -12,6 +12,7 @@
 // <summary></summary>
 // ***********************************************************************
 
+using System.ComponentModel;
 using AutoMapper;
 using ENSEK.Contracts;
 using ENSEK.Entities.DTO;
@@ -19,6 +20,8 @@ using ENSEK.Entities.Extensions;
 using ENSEK.Entities.Models;
 using ENSEK.Entities.Models.Enum;
 using Microsoft.AspNetCore.Mvc;
+using NPOI.OpenXml4Net.OPC.Internal;
+using OfficeOpenXml;
 
 
 namespace ENSEK_API.Controllers;
@@ -77,6 +80,8 @@ public class MeterReadingUploadsController : ControllerBase
     [HttpPost("single-file")]
     public async Task<IActionResult> Upload(IFormFile file)
     {
+
+
         var metersReading = ExtensionMethods.LoadExcelFile(file, _configuration);
 
 
@@ -100,7 +105,8 @@ public class MeterReadingUploadsController : ControllerBase
                     AccountIddto = item.AccountId,
                     MeterReadingDateTimedto = item.MeterReadingDateTime.ToString(),
                     MeterReadValuedto = item.MeterReadValue,
-                    RowNodto = item.RowNo
+                    RowNodto = item.RowNo,
+                    Iddto = item.Id
                 };
                 rtnData.Add(newReading);
             }
@@ -108,40 +114,40 @@ public class MeterReadingUploadsController : ControllerBase
 
         if (metersReading.FileImportResponse == ImportResponse.Failed) return BadRequest(metersReading.Errors);
 
-
+    
         return Ok(metersReading.MetersReadings);
     }
 
 
-    /// <summary>
-    /// Uploads the data.
-    /// </summary>
-    /// <param name="meterreading">The meterreading.</param>
-    /// <returns>IActionResult.</returns>
-    [HttpPost("meterreading")]
-    public async Task<IActionResult> UploadData(MeterReadingDto meterreading)
+/// <summary>
+/// Uploads the data.
+/// </summary>
+/// <param name="meterreading">The meterreading.</param>
+/// <returns>IActionResult.</returns>
+[HttpPost("meterreading")]
+public async Task<IActionResult> UploadData(MeterReadingDto meterreading)
+{
+    var metersReading = new List<MeterReading>();
+    var input = new MeterReading();
+
+    DateTime dateValue;
+    var _dateGood = DateTime.TryParse(meterreading.MeterReadingDateTimedto, out dateValue);
+
+
+    if (_dateGood)
     {
-        var metersReading = new List<MeterReading>();
-        var input = new MeterReading();
-
-        DateTime dateValue;
-        var _dateGood = DateTime.TryParse(meterreading.MeterReadingDateTimedto, out dateValue);
-
-
-        if (_dateGood)
+        input = new MeterReading
         {
-            input = new MeterReading
-            {
-                AccountId = meterreading.AccountIddto,
-                MeterReadingDateTime = dateValue,
-                MeterReadValue = meterreading.MeterReadValuedto
-            };
-            metersReading.Add(input);
+            AccountId = meterreading.AccountIddto,
+            MeterReadingDateTime = dateValue,
+            MeterReadValue = meterreading.MeterReadValuedto
+        };
+        metersReading.Add(input);
 #pragma warning disable CS1998
-            await Task.Run(async () => _meterReadingRepository.UpdateMeterReadings(metersReading));
+        await Task.Run(async () => _meterReadingRepository.UpdateMeterReadings(metersReading));
 #pragma warning restore CS1998
-        }
-
-        return Ok(input);
     }
+
+    return Ok(input);
+}
 }

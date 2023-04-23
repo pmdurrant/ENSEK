@@ -1,0 +1,72 @@
+﻿@model IEnumerable<MeterReadingsViewModel>
+<
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Index";
+
+
+    <form asp-controller="MeterReadings" asp-action="Index" method="get">
+      
+    </form>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MeterReadingDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MeterReadValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RowNo )
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                        @Html.DisplayFor(modelItem => item.AccountId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MeterReadingDateTime)
+                </td>
+                   
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.MeterReadValue)
+                      
+                    
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem=> item.RowNo)
+
+                </td>
+                <td>
+                    @*
+                    //asp actions not working
+                    // <a asp-controller="MeterReadings" asp-action="Details" asp-route-id="@item.Id">Get</a>
+                    //    <a asp-controller="MeterReadings" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    //    <a asp-controller="MeterReadings" asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-primary rounded-0">Details</a>
+                        *@
+                        <a href="/MeterReadings/details/@item.Id">Details</a>
+
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <div>
+        <a asp-action="MeterReadings">Back to List</a>
+    </div>
+
+}

@@ -1,4 +1,17 @@
-﻿using AutoMapper;
+﻿// ***********************************************************************
+// Assembly         : TestProjectAPI
+// Author           : pdurr
+// Created          : 04-16-2023
+//
+// Last Modified By : pdurr
+// Last Modified On : 04-17-2023
+// ***********************************************************************
+// <copyright file="meterreadingControllerTest.cs" company="TestProjectAPI">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using AutoMapper;
 using ENSEK.Contracts;
 using ENSEK.Entities.Models;
 using ENSEK_API.Controllers;
@@ -9,16 +22,34 @@ using Microsoft.Extensions.Configuration;
 
 namespace TestProjectAPI.Controller
 {
+    /// <summary>
+    /// Class meterreadingControllerTest.
+    /// </summary>
     public class meterreadingControllerTest
     {
+        /// <summary>
+        /// The controller
+        /// </summary>
         private readonly MeterReadingUploadsController _controller;
+        /// <summary>
+        /// The service
+        /// </summary>
         private readonly IMeterReadingRepository _service;
+        /// <summary>
+        /// The configuration
+        /// </summary>
         private readonly IConfiguration _configuration;
 
+        /// <summary>
+        /// The mapper
+        /// </summary>
         private readonly IMapper _mapper;
 
 
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="meterreadingControllerTest"/> class.
+        /// </summary>
         public meterreadingControllerTest()
         {
             _service = new MeterReadingServiceFake();
@@ -29,6 +60,9 @@ namespace TestProjectAPI.Controller
             _controller = new MeterReadingUploadsController(_configuration, _service, _mapper);
         }
 
+        /// <summary>
+        /// Defines the test method Get_WhenCalled_ReturnsOkResult.
+        /// </summary>
         [Fact]
         public void Get_WhenCalled_ReturnsOkResult()
         {
@@ -53,6 +87,9 @@ namespace TestProjectAPI.Controller
             Assert.IsType<OkObjectResult>(okResult.Result);
         }
 
+        /// <summary>
+        /// Defines the test method Get_WhenCalled_ReturnsAllItems.
+        /// </summary>
         [Fact]
         public void Get_WhenCalled_ReturnsAllItems()
         {

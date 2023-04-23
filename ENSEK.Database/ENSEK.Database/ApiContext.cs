@@ -51,5 +51,7 @@ namespace ENSEK.Database
         /// <value>The readings.</value>
         public DbSet<MeterReading> Readings { get; set; }
 
+        public DbSet<Account> Accounts { get; set; }
+
     }
 }

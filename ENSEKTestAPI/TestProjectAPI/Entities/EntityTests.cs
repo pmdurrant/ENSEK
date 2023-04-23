@@ -1,9 +1,28 @@
-﻿using ENSEK.Entities.Models;
+﻿// ***********************************************************************
+// Assembly         : TestProjectAPI
+// Author           : pdurr
+// Created          : 04-17-2023
+//
+// Last Modified By : pdurr
+// Last Modified On : 04-17-2023
+// ***********************************************************************
+// <copyright file="EntityTests.cs" company="TestProjectAPI">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using ENSEK.Entities.Models;
 
 namespace TestProjectAPI.Entities
 {
+    /// <summary>
+    /// Class EntityTests.
+    /// </summary>
     public class EntityTests
     {
+        /// <summary>
+        /// Defines the test method Create_Entity.
+        /// </summary>
         [Fact]
         public void Create_Entity()
         {
@@ -21,6 +40,9 @@ namespace TestProjectAPI.Entities
         }
 
 
+        /// <summary>
+        /// Defines the test method Bad_Entity.
+        /// </summary>
         [Fact]
 
 
