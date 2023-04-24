@@ -32,7 +32,7 @@ namespace ENSEK.Contracts
         /// <param name="authorizationToken">The authorization token.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;System.String&gt;.</returns>
-        Task<string> GetStringAsync(string uri, string authorizationToken = null, string authorizationMethod = "Bearer");
+        Task<string> GetStringAsync(string uri, string? authorizationToken = null, string authorizationMethod = "Bearer");
 
         /// <summary>
         /// Gets the string asynchronous.
@@ -42,7 +42,7 @@ namespace ENSEK.Contracts
         /// <param name="authorizationToken">The authorization token.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;System.String&gt;.</returns>
-        Task<string> GetStringAsync(string uri, Dictionary<string, string> headers, string authorizationToken = null, string authorizationMethod = "Bearer");
+        Task<string> GetStringAsync(string uri, Dictionary<string, string> headers, string? authorizationToken = null, string authorizationMethod = "Bearer");
 
         /// <summary>
         /// Gets the asynchronous.
@@ -52,7 +52,7 @@ namespace ENSEK.Contracts
         /// <param name="authorizationToken">The authorization token.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        Task<HttpResponseMessage> GetAsync(string uri, Dictionary<string, string> headers = null, string authorizationToken = null, string authorizationMethod = "Bearer");
+        Task<HttpResponseMessage> GetAsync(string uri, Dictionary<string, string>? headers = null, string? authorizationToken = null, string authorizationMethod = "Bearer");
 
         /// <summary>
         /// Posts the asynchronous.
@@ -60,11 +60,12 @@ namespace ENSEK.Contracts
         /// <typeparam name="T"></typeparam>
         /// <param name="uri">The URI.</param>
         /// <param name="item">The item.</param>
+        /// <param name="headers">The headers.</param>
         /// <param name="authorizationToken">The authorization token.</param>
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        Task<HttpResponseMessage> PostAsync<T>(string uri, T item, List<HeaderItem> headers, string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer");
+        Task<HttpResponseMessage> PostAsync<T>(string uri, T item, List<HeaderItem>? headers, string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer");
 
         /// <summary>
         /// Deletes the asynchronous.
@@ -74,7 +75,7 @@ namespace ENSEK.Contracts
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        Task<HttpResponseMessage> DeleteAsync(string uri, string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer");
+        Task<HttpResponseMessage> DeleteAsync(string uri, string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer");
 
         /// <summary>
         /// Puts the asynchronous.
@@ -86,7 +87,7 @@ namespace ENSEK.Contracts
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        Task<HttpResponseMessage> PutAsync<T>(string uri, T item, string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer");
+        Task<HttpResponseMessage> PutAsync<T>(string uri, T item, string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer");
 
         /// <summary>
         /// Patches the asynchronous.
@@ -98,7 +99,7 @@ namespace ENSEK.Contracts
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        Task<HttpResponseMessage> PatchAsync<T>(string uri, T item, string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer");
+        Task<HttpResponseMessage> PatchAsync<T>(string uri, T item, string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer");
 
         /// <summary>
         /// Posts the form asynchronous.
@@ -109,7 +110,7 @@ namespace ENSEK.Contracts
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        Task<HttpResponseMessage> PostFormAsync(string uri, MultipartFormDataContent form, string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer");
+        Task<HttpResponseMessage> PostFormAsync(string uri, MultipartFormDataContent form, string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer");
 
         /// <summary>
         /// Puts the form asynchronous.
@@ -120,7 +121,7 @@ namespace ENSEK.Contracts
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        Task<HttpResponseMessage> PutFormAsync(string uri, MultipartFormDataContent form, string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer");
+        Task<HttpResponseMessage> PutFormAsync(string uri, MultipartFormDataContent form, string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer");
 
         /// <summary>
         /// Posts the form asynchronous.
@@ -131,6 +132,6 @@ namespace ENSEK.Contracts
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        Task<HttpResponseMessage> PostFormAsync(string uri, FormUrlEncodedContent form, string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer");
+        Task<HttpResponseMessage> PostFormAsync(string uri, FormUrlEncodedContent form, string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer");
     }
 }

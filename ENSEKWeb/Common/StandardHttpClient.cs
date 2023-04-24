@@ -65,7 +65,7 @@ namespace ENSEKWeb.Common
         /// <param name="authorizationToken">Auth Token</param>
         /// <param name="authorizationMethod">Auth Method, Default Bearer</param>
         /// <returns>Task&lt;System.String&gt;.</returns>
-        public async Task<string> GetStringAsync(string uri, string authorizationToken = null,
+        public async Task<string> GetStringAsync(string uri, string? authorizationToken = null,
             string authorizationMethod = "Bearer")
         {
             return await GetStringAsync(uri, new Dictionary<string, string>(), authorizationToken, authorizationMethod);
@@ -80,7 +80,7 @@ namespace ENSEKWeb.Common
         /// <param name="authorizationMethod">Auth Method, Default Bearer</param>
         /// <returns>Task&lt;System.String&gt;.</returns>
         public async Task<string> GetStringAsync(string uri, Dictionary<string, string> headers,
-            string authorizationToken = null, string authorizationMethod = "Bearer")
+            string? authorizationToken = null, string authorizationMethod = "Bearer")
         {
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
 
@@ -105,8 +105,8 @@ namespace ENSEKWeb.Common
         /// <param name="authorizationToken">The authorization token.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        public Task<HttpResponseMessage> GetAsync(string uri, Dictionary<string, string> headers = null,
-            string authorizationToken = null, string authorizationMethod = "Bearer")
+        public Task<HttpResponseMessage> GetAsync(string uri, Dictionary<string, string>? headers = null,
+            string? authorizationToken = null, string authorizationMethod = "Bearer")
         {
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
 
@@ -134,8 +134,8 @@ namespace ENSEKWeb.Common
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        public async Task<HttpResponseMessage> PostAsync<T>(string uri, T item, List<HeaderItem> headeritems, string authorizationToken = null,
-            string requestId = null, string authorizationMethod = "Bearer")
+        public async Task<HttpResponseMessage> PostAsync<T>(string uri, T item, List<HeaderItem>? headeritems, string? authorizationToken = null,
+            string? requestId = null, string authorizationMethod = "Bearer")
         {
             return await DoPostPutAsync(HttpMethod.Post, uri, item, headeritems, authorizationToken, requestId, authorizationMethod);
         }
@@ -150,8 +150,8 @@ namespace ENSEKWeb.Common
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        public async Task<HttpResponseMessage> PostFormAsync(string uri, MultipartFormDataContent form, List<HeaderItem> headers,
-            string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer")
+        public async Task<HttpResponseMessage> PostFormAsync(string uri, MultipartFormDataContent form, List<HeaderItem>? headers,
+            string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer")
         {
             return await DoPostPutFormAsync(HttpMethod.Post, uri, form, authorizationToken, requestId,
                 authorizationMethod);
@@ -167,8 +167,8 @@ namespace ENSEKWeb.Common
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        public async Task<HttpResponseMessage> PostFormAsync(string uri, FormUrlEncodedContent form, List<HeaderItem> headers,
-            string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer")
+        public async Task<HttpResponseMessage> PostFormAsync(string uri, FormUrlEncodedContent form, List<HeaderItem>? headers,
+            string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer")
         {
             return await DoPostPutFormAsync(HttpMethod.Post, uri, form, authorizationToken, requestId,
                 authorizationMethod);
@@ -184,8 +184,8 @@ namespace ENSEKWeb.Common
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        public async Task<HttpResponseMessage> PutFormAsync(string uri, MultipartFormDataContent form, List<HeaderItem> headers,
-            string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer")
+        public async Task<HttpResponseMessage> PutFormAsync(string uri, MultipartFormDataContent form, List<HeaderItem>? headers,
+            string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer")
         {
             return await DoPostPutFormAsync(HttpMethod.Put, uri, form, authorizationToken, requestId,
                 authorizationMethod);
@@ -202,8 +202,8 @@ namespace ENSEKWeb.Common
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        public async Task<HttpResponseMessage> PutAsync<T>(string uri, T item, List<HeaderItem> headers, string authorizationToken = null,
-            string requestId = null, string authorizationMethod = "Bearer")
+        public async Task<HttpResponseMessage> PutAsync<T>(string uri, T item, List<HeaderItem>? headers, string? authorizationToken = null,
+            string? requestId = null, string authorizationMethod = "Bearer")
         {
             return await DoPostPutAsync(HttpMethod.Put, uri, item, headers, authorizationToken, requestId, authorizationMethod);
         }
@@ -218,8 +218,8 @@ namespace ENSEKWeb.Common
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        public async Task<HttpResponseMessage> PatchAsync<T>(string uri, T item, string authorizationToken = null,
-            string requestId = null, string authorizationMethod = "Bearer")
+        public async Task<HttpResponseMessage> PatchAsync<T>(string uri, T item, string? authorizationToken = null,
+            string? requestId = null, string authorizationMethod = "Bearer")
         {
             return await DoPatchAsync(new HttpMethod("PATCH"), uri, item, authorizationToken, requestId,
                 authorizationMethod);
@@ -233,8 +233,8 @@ namespace ENSEKWeb.Common
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        public async Task<HttpResponseMessage> DeleteAsync(string uri, string authorizationToken = null,
-            string requestId = null, string authorizationMethod = "Bearer")
+        public async Task<HttpResponseMessage> DeleteAsync(string uri, string? authorizationToken = null,
+            string? requestId = null, string authorizationMethod = "Bearer")
         {
             var requestMessage = new HttpRequestMessage(HttpMethod.Delete, uri);
 
@@ -261,8 +261,8 @@ namespace ENSEKWeb.Common
         /// <param name="requestId">The request identifier.</param>
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
-        private async Task<HttpResponseMessage> DoPostPutAsync<T>(HttpMethod method, string uri, T item, List<HeaderItem> headers,
-            string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer")
+        private async Task<HttpResponseMessage> DoPostPutAsync<T>(HttpMethod method, string uri, T item, List<HeaderItem>? headers,
+            string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer")
         {
 
             var content = new StringContent(JsonConvert.SerializeObject(item), Encoding.UTF8, "application/json");
@@ -287,7 +287,7 @@ namespace ENSEKWeb.Common
         /// <exception cref="System.ArgumentException">Value must be either post or put. - method</exception>
         /// <exception cref="System.Net.Http.HttpRequestException"></exception>
         private async Task<HttpResponseMessage> DoPostPutFormAsync(HttpMethod method, string uri, HttpContent content,
-            string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer")
+            string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer")
         {
             if (method != HttpMethod.Post && method != HttpMethod.Put)
                 throw new ArgumentException("Value must be either post or put.", nameof(method));
@@ -335,7 +335,7 @@ namespace ENSEKWeb.Common
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
         /// <exception cref="System.Net.Http.HttpRequestException"></exception>
         private async Task<HttpResponseMessage> DoPatchAsync<T>(HttpMethod method, string uri, T item,
-            string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer")
+            string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer")
         {
             var requestMessage = new HttpRequestMessage(method, uri);
 
@@ -366,9 +366,13 @@ namespace ENSEKWeb.Common
         /// <param name="requestMessage">The request message.</param>
         private void SetAuthorizationHeader(HttpRequestMessage requestMessage)
         {
+#pragma warning disable CS8602
             var authorizationHeader = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+#pragma warning restore CS8602
             if (!string.IsNullOrEmpty(authorizationHeader))
+#pragma warning disable CS8604
                 requestMessage.Headers.Add("Authorization", new List<string> { authorizationHeader });
+#pragma warning restore CS8604
         }
 
         /// <summary>
@@ -382,7 +386,7 @@ namespace ENSEKWeb.Common
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
         /// <exception cref="System.NotImplementedException"></exception>
-        public Task<HttpResponseMessage> PutAsync<T>(string uri, T item, string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer")
+        public Task<HttpResponseMessage> PutAsync<T>(string uri, T item, string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer")
         {
             throw new NotImplementedException();
         }
@@ -397,7 +401,7 @@ namespace ENSEKWeb.Common
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
         /// <exception cref="System.NotImplementedException"></exception>
-        public Task<HttpResponseMessage> PostFormAsync(string uri, MultipartFormDataContent form, string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer")
+        public Task<HttpResponseMessage> PostFormAsync(string uri, MultipartFormDataContent form, string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer")
         {
             throw new NotImplementedException();
         }
@@ -412,7 +416,7 @@ namespace ENSEKWeb.Common
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
         /// <exception cref="System.NotImplementedException"></exception>
-        public Task<HttpResponseMessage> PutFormAsync(string uri, MultipartFormDataContent form, string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer")
+        public Task<HttpResponseMessage> PutFormAsync(string uri, MultipartFormDataContent form, string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer")
         {
             throw new NotImplementedException();
         }
@@ -427,7 +431,7 @@ namespace ENSEKWeb.Common
         /// <param name="authorizationMethod">The authorization method.</param>
         /// <returns>Task&lt;HttpResponseMessage&gt;.</returns>
         /// <exception cref="System.NotImplementedException"></exception>
-        public Task<HttpResponseMessage> PostFormAsync(string uri, FormUrlEncodedContent form, string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer")
+        public Task<HttpResponseMessage> PostFormAsync(string uri, FormUrlEncodedContent form, string? authorizationToken = null, string? requestId = null, string authorizationMethod = "Bearer")
         {
             throw new NotImplementedException();
         }

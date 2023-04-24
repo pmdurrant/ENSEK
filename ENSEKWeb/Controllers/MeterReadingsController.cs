@@ -61,11 +61,15 @@ namespace ENSEKWeb.Controllers
         [Route("MeterReadings/Details/{id?}")]
         public async Task<ViewResult> Details(int? id)
         {
-            var meterReadings = _meterReadingRepository.GetMeterReadings();
+#pragma warning disable CS1998
+            var meterReadings = await Task.Run(async () => _meterReadingRepository.GetMeterReadings());
+#pragma warning restore CS1998
             var findrst = (from n in meterReadings where n.Id == id select n).FirstOrDefault();
             var rtn = new MeterReadingViewModel()
             {
+#pragma warning disable CS8602
                 RowNo = findrst.RowNo,
+#pragma warning restore CS8602
 
                 MeterReadValue = findrst.MeterReadValue,
                 MeterReadingDateTime = findrst.MeterReadingDateTime,
@@ -84,7 +88,7 @@ namespace ENSEKWeb.Controllers
         {
             #region API Call
 
-            var Headers = new Dictionary<string, string>(){
+            var headers = new Dictionary<string, string>(){
                 {"content - type", "application/json; charset=utf-8" }
             };
 
@@ -101,44 +105,46 @@ namespace ENSEKWeb.Controllers
             var readings = JsonConvert.DeserializeObject<List<MeterReading>>(apiContent);
          
             //Store readings 
+#pragma warning disable CS8604
             _meterReadingRepository.UpdateMeterReadings(readings);
+#pragma warning restore CS8604
 
-           //Add  records from API
-            foreach (var meterreading in readings)
+            //Add  records from API
+            foreach (var meterReading in readings)
             {
 
                 rtn.Add(new MeterReadingsViewModel()
                 {
-                    RowNo = meterreading.RowNo,
+                    RowNo = meterReading.RowNo,
 
-                    MeterReadValue = meterreading.MeterReadValue,
-                    MeterReadingDateTime = meterreading.MeterReadingDateTime,
-                    AccountId = meterreading.AccountId,
-                    Id = meterreading.Id
+                    MeterReadValue = meterReading.MeterReadValue,
+                    MeterReadingDateTime = meterReading.MeterReadingDateTime,
+                    AccountId = meterReading.AccountId,
+                    Id = meterReading.Id
                 });
 
             }
 
             // add records from store
-            foreach (var meterreading in meterReadingsStored)
+            foreach (var meterReading in meterReadingsStored)
             {
 
                 var findrec=(from p in rtn
-                            where  p.AccountId == meterreading.AccountId &&
-                                       p.MeterReadingDateTime == meterreading.MeterReadingDateTime &&
-                                       p.MeterReadValue == meterreading.MeterReadValue &&
-                                       p.RowNo == meterreading.RowNo && p.Id == meterreading.Id
+                            where  p.AccountId == meterReading.AccountId &&
+                                       p.MeterReadingDateTime == meterReading.MeterReadingDateTime &&
+                                       p.MeterReadValue == meterReading.MeterReadValue &&
+                                       p.RowNo == meterReading.RowNo && p.Id == meterReading.Id
                             select p).Single();
 
                 if (findrec ==null)
                 {
                     rtn.Add(new MeterReadingsViewModel()
                     {
-                        MeterReadValue = meterreading.MeterReadValue,
-                        MeterReadingDateTime = meterreading.MeterReadingDateTime,
-                        AccountId = meterreading.AccountId,
-                        Id = meterreading.Id,
-                        RowNo= meterreading.RowNo
+                        MeterReadValue = meterReading.MeterReadValue,
+                        MeterReadingDateTime = meterReading.MeterReadingDateTime,
+                        AccountId = meterReading.AccountId,
+                        Id = meterReading.Id,
+                        RowNo= meterReading.RowNo
 
                     });
                 }

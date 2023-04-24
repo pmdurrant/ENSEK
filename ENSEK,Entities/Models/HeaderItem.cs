@@ -8,7 +8,7 @@ namespace ENSEK.Entities.Models
 {
      public class HeaderItem
     {
-        public string HeaderName { get; set; }
-        public string HeaderValue { get; set; }
+        public string? HeaderName { get; set; }
+        public string? HeaderValue { get; set; }
     }
 }
