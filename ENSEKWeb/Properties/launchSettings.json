@@ -12,7 +12,7 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5208",
+      "applicationUrl": "http://ensekweb.officeblox.co.uk:5208;https://ensekweb.officeblox.co.uk:5209",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

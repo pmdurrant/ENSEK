@@ -11,13 +11,41 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
+
+using System.Security.Cryptography.X509Certificates;
 using ENSEK.Contracts;
 using ENSEK.Repository;
 using ENSEKWeb.Common;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-
+using Microsoft.Extensions.Options;
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Identity.Web;
+System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
 var builder = WebApplication.CreateBuilder(args);
+var loadpath = Directory.GetCurrentDirectory().ToString() + @"/https/_.officeblox.co.uk-crt.pfx";
 
+try
+{
+    var cert = new X509Certificate2(loadpath, "Gateway");
+
+
+    builder.WebHost.UseKestrel(options =>
+    { 
+        options.Listen(IPAddress.Any, 5008);
+        options.Listen(IPAddress.Any, 5009,
+       listenOptions =>
+       {
+           listenOptions.UseHttps(cert);
+       });
+    });
+}
+catch
+{
+    Console.WriteLine("Certificate load failure");
+}
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -42,5 +70,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
+app.UseHttpsRedirection();
 app.Run();
