@@ -1,6 +1,7 @@
 # ENSEK
 <br>
-![Visitor Count](https://profile-counter.glitch.me/pmdurrant/count.svg)<br>
+![Visitor Count](https://profile-counter.glitch.me/pmdurrant/count.svg)
+<br>
 SonarQube <br>
 [![Quality gate](http://localhost:9000/api/project_badges/quality_gate?project=ENSEK&token=sqb_3981e2a17fcd6b395155a05a5be4dfe42dc30554)](http://localhost:9000/dashboard?id=ENSEK)
 
