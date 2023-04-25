@@ -7,7 +7,7 @@ SonarQube <br>
  <br>
 Add  entry to hosts file <br>
 127.0.0.1 ensek.officeblox.co.uk <br>
-
+127.0.0.1 ensekweb.officeblox.co.uk <br>
 
 https://ensek.officeblox.co.uk:5004/swagger/index.html   -   API <br>
 https://ensekweb.officeblox.co.uk:7150                   - web <br>
