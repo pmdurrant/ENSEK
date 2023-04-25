@@ -18,6 +18,7 @@ using ENSEK_API.Controllers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using SixLabors.ImageSharp.Metadata.Profiles.Xmp;
 
 
 namespace TestProjectAPI.Controller
@@ -54,6 +55,8 @@ namespace TestProjectAPI.Controller
         {
             _service = new MeterReadingServiceFake();
 
+            var config = new MapperConfiguration(cfg => cfg.AddProfile<MappingProfile>());
+             _mapper = config.CreateMapper();
 
             _configuration = new ConfigurationBuilder().AddJsonFile("appconfig.json").Build();
 
