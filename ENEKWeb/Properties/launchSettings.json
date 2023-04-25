@@ -3,16 +3,16 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:30125",
-      "sslPort": 0
+      "applicationUrl": "http://localhost:18535",
+      "sslPort": 44345
     }
   },
   "profiles": {
-    "ENSEKWeb": {
+    "WebApplication7": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "http://ensekweb.officeblox.co.uk:5208;https://ensekweb.officeblox.co.uk:5209",
+      "applicationUrl": "https://ensekweb.officeblox.co.uk:7150;http://ensekweb.officeblox.co.uk:5290",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

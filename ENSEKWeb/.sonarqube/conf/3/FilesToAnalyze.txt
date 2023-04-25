@@ -1,4 +1,0 @@
-﻿C:\working\ENSEK\ENSEK.Repository\ENSEKRepository()\MeterReadingRepository.cs
-C:\Users\pdurr\.nuget\packages\xunit.runner.visualstudio\2.4.5\build\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
-C:\Users\pdurr\.nuget\packages\xunit.runner.visualstudio\2.4.5\build\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
-C:\Users\pdurr\.nuget\packages\xunit.runner.visualstudio\2.4.5\build\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll
